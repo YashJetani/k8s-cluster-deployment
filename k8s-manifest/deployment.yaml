@@ -24,7 +24,7 @@ spec:
     spec:
       containers:
       - name: nginx
-        image: yourdockerhubusername/nginx-devops:latest
+        image: yashjetani1408/nginx-devops:latest
         ports:
         - containerPort: 80
           protocol: TCP
