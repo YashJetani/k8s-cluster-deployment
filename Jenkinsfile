@@ -3,7 +3,7 @@ pipeline {
     
     environment {
         DOCKER_HUB_CREDENTIALS = credentials('docker-hub-credentials')
-        DOCKER_IMAGE_NAME = 'yashjetani1408/nginx-devops'
+        DOCKER_IMAGE_NAME = 'yourdockerhubusername/nginx-devops'
         DOCKER_TAG = "${BUILD_NUMBER}"
         GITHUB_CREDENTIALS = credentials('github-credentials')
     }
