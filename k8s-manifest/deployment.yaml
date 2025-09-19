@@ -24,7 +24,7 @@ spec:
     spec:
       containers:
       - name: nginx
-        image: yashjetani1408/nginx-devops:latest
+        image: yourdockerhubusername/nginx-devops:latest
         ports:
         - containerPort: 80
           protocol: TCP
@@ -49,7 +49,8 @@ spec:
           periodSeconds: 10
         securityContext:
           runAsNonRoot: true
-          runAsUser: 1001
+          runAsUser: 101  # nginx user in alpine image
+          runAsGroup: 101 # nginx group in alpine image
           allowPrivilegeEscalation: false
           readOnlyRootFilesystem: false
           capabilities:
@@ -58,4 +59,4 @@ spec:
             add:
             - NET_BIND_SERVICE
       securityContext:
-        fsGroup: 1001
+        fsGroup: 101
